@@ -23,7 +23,7 @@ simple and intuitive derivation. IEEE Signal processing magazine, 29(5):128–
 Controlls
 
 * Pure Pursuit Controller:For path tracking. (More information at https://www.mathworks.com/help/robotics/ug/pure-pursuit-controller.html)
-* Field Histogram (VFH): For Obstacle and steerieag direction. (More information at https://www.mathworks.com/help/nav/ug/vector-field-histograms.html)
+* Field Histogram (VFH): For Obstacle avoidance and steering direction. (More information at https://www.mathworks.com/help/nav/ug/vector-field-histograms.html)
 
 Simulation
 
@@ -36,11 +36,11 @@ MathWorks Student Competitions Team (2021). Mobile Robotics Simulation Toolbox (
 Be sure you already have the requirements
 
 * Open EKF.mlx  (Live Script)
-* Set all the constants configuration.
+* Set all the configuration constants .
 
 <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_gui.png" alt="Full System" width="440"/>
 
-* Run the entire simulation, see and analize EKF algorithm, constats, and enviroment setup.
+* Run the entire simulation, see and analyze EKF algorithm, constant, and environment setup.
 
 <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_execution.PNG" alt="Full System" width="440"/>
 
