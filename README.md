@@ -38,11 +38,11 @@ Be sure you already have the requirements
 * Open EKF.mlx  (Live Script)
 * Set all the constants configuration.
 
-<img src="" alt="Full System" width="640"/>
+<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_execution.PNG" alt="Full System" width="640"/>
 
 * Run the entire simulation, see and analize EKF algorithm, constats, and enviroment setup.
 
-<img src="" alt="Full System" width="640"/>
+<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_gui.png" alt="Full System" width="640"/>
 
 
 
