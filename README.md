@@ -20,7 +20,7 @@ EKF (An excelent deviation of EKF can be foud in: THRUN, Sebastian; BURGARD, Wol
 simple and intuitive derivation. IEEE Signal processing magazine, 29(5):128–
 132, 2012.)
 
-Controlls
+Controllers
 
 * Pure Pursuit Controller:For path tracking. (More information at https://www.mathworks.com/help/robotics/ug/pure-pursuit-controller.html)
 * Field Histogram (VFH): For Obstacle avoidance and steering direction. (More information at https://www.mathworks.com/help/nav/ug/vector-field-histograms.html)
@@ -44,6 +44,11 @@ Be sure you already have the requirements
 
 <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_execution.PNG" alt="Full System" width="440"/>
 
+* Try to change  all  parameters such as map, landmarks etc.
+ 
+<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_office.PNG" alt="Full System" width="440"/>
 
-
+Odom:Pink line
+EKF pose prediction: Green line
+Robot pose: Blue line
 
