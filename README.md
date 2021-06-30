@@ -48,7 +48,9 @@ Be sure you already have the requirements
  
 <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_office.PNG" alt="Full System" width="440"/>
 
-Odom:Pink line
-EKF pose prediction: Green line
-Robot pose: Blue line
+Odom:Pink line/
+
+EKF pose prediction: Green line/
+
+/Robot pose: Blue line/
 
