@@ -1,4 +1,4 @@
-function [xk, u] = sampleOdometry(o_1,o,x)
+function [xk, u] = sampleOdometry(o_1,o,x,alpha)
 %SAMPLEODOMETRY Summary: Transform two poses in a comand
 %   Detailed explanation goes here
 % o_1 input parameter is the odometry pose in t-1 is a vector like [ x  y thetha ]  
@@ -17,7 +17,7 @@ theta_bar = o_1(3);
 %%c = normalizeAngle(3.14+1.57);
 a = sqrt(power(x_bar - x_bar_p, 2) + power(y_bar - y_bar_p, 2));
 
-alpha= [ .02 .0001 .001 .00001 ];
+
 
 if  a < .01  
     d_rot1 = 0; % Si solo gira  y este valor no es cero entonces  d_rot2 = - d_rot1 y el angulo final es practicamente el mismo  que el inicial :o alv
