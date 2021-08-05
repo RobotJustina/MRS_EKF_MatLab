@@ -1,0 +1,8 @@
+prefix=/home/marco/PROYECTOS/MRS_EKF_MatLab/catkin_ws/src/matlab_msg_gen_ros1/glnxa64/install
+
+Name: custom_msgs
+Description: Description of custom_msgs
+Version: 0.0.0
+Cflags: -I/home/marco/PROYECTOS/MRS_EKF_MatLab/catkin_ws/src/matlab_msg_gen_ros1/glnxa64/install/include
+Libs: -L/home/marco/PROYECTOS/MRS_EKF_MatLab/catkin_ws/src/matlab_msg_gen_ros1/glnxa64/install/lib 
+Requires: message_runtime roscpp

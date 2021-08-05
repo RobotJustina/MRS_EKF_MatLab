@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <model name='nasal_inflammation_capsul'>
+      <link name='link'>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+        <visual name='capsul'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.083 0.135 0.026</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://nasal_inflammation_capsul/scripts</uri>
+              <uri>model://nasal_inflammation_capsul/textures</uri>
+              <name>oral_medicine/nasal_inflammation_capsule</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_capsul'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.083 0.135 0.026</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.2</restitution_coefficient>
+              <threshold>0</threshold>
+            </bounce>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode>
+                 <max_vel>10</max_vel>
+              </ode>
+            </contact>
+          </surface>
+        </collision>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>0</static>
+    </model>
+</sdf>

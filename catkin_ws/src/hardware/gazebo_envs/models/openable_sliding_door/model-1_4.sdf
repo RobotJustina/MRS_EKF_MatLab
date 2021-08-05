@@ -1,0 +1,712 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <model name='openable_sliding_door'>
+      <joint name="frame_to_world_joint" type="revolute">
+          <parent>world</parent>
+          <child>frame</child>
+          <!-- Mimic fixed joint  -->
+          <axis>
+              <xyz>0 0 1</xyz>
+              <limit>
+                  <upper>0</upper>
+                  <lower>0</lower>
+              </limit>
+          </axis>
+      </joint>
+      <link name='frame'>
+        <inertial>
+          <mass>50</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <visual name='right_frame'>
+          <pose>0 0.5325 0.995 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 0.035 1.990</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_right_frame'>
+          <pose>0 0.5325 0.995 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 0.035 1.990</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='left_frame'>
+          <pose>0 -0.5325 0.995 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 0.035 1.990</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_left_frame'>
+          <pose>0 -0.5325 0.995 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 0.035 1.990</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='top_frame'>
+          <pose>0 0 2.040 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 1.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_top_frame'>
+          <pose>0 0 2.040 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 1.1 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+
+        <visual name='top_guard'>
+          <pose>0.05 -0.55 2.065 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.045 2.2 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_top_guard'>
+          <pose>0.05 -0.55 2.065 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.045 2.2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='front_guard'>
+          <pose>0.0825 -0.55 2.04 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.020 2.2 0.10</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_front_guard'>
+          <pose>0.0825 -0.55 2.04 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.020 2.2 0.10</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='door'>
+        <pose>-0.0275 0 0 0 0 0</pose>
+        <visual name='glass'>
+          <pose>0.0775 0 1.0250 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 0.77 1.580</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+<!--
+              <uri>model://base_materials/color/scripts</uri>
+-->
+              <name>hsr_color/white_transparency1</name>
+              <name>hsr_color/cornflowerblue_transparency1</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_glass'>
+          <pose>0.0775 0 1.0250 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 0.77 1.580</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='top_frame'>
+          <pose>0.0775 0 1.9075 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 1.1 0.185</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts/wood.material</uri>
+              <name>base_materials/wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_top_frame'>
+          <pose>0.0775 0 1.9075 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 1.1 0.185</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='right_frame'>
+          <pose>0.0775 0.4675 1.0250 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 0.165 1.580</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts/wood.material</uri>
+              <name>base_materials/wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_right_frame'>
+          <pose>0.0775 0.4675 1.0250 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 0.165 1.580</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='left_frame'>
+          <pose>0.0775 -0.4675 1.0250 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 0.165 1.580</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts/wood.material</uri>
+              <name>base_materials/wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_left_frame'>
+          <pose>0.0775 -0.4675 1.0250 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 0.165 1.580</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='bottom_frame'>
+          <pose>0.0775 0 0.1425 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 1.1 0.185</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts/wood.material</uri>
+              <name>base_materials/wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_bottom_frame'>
+          <pose>0.0775 0 0.1425 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.030 1.1 0.185</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_top_frame'>
+          <pose>0.0775 0.4675 1.0675 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.125</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_top_frame'>
+          <pose>0.0775 0.4675 1.0675 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.125</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_bottom_frame'>
+          <pose>0.0775 0.4675 0.8425 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.125</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_bottom_frame'>
+          <pose>0.0775 0.4675 0.8425 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.125</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_front_frame'>
+          <pose>0.14 0.4675 0.955 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.225</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_front_frame'>
+          <pose>0.14 0.4675 0.955 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.225</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_back_frame'>
+          <pose>0.015 0.4675 0.955 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.225</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_back_frame'>
+          <pose>0.015 0.4675 0.955 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.0125</radius>
+              <length>0.225</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_front_top_corner'>
+          <pose>0.14 0.4675 1.0675 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_front_top_corner'>
+          <pose>0.14 0.4675 1.0675 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_front_bottom_corner'>
+          <pose>0.14 0.4675 0.8425 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_front_bottom_corner'>
+          <pose>0.14 0.4675 0.8425 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_back_top_corner'>
+          <pose>0.015 0.4675 1.0675 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_back_top_corner'>
+          <pose>0.015 0.4675 1.0675 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_back_bottom_corner'>
+          <pose>0.015 0.4675 0.8425 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_back_bottom_corner'>
+          <pose>0.015 0.4675 0.8425 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.0125</radius>
+            </sphere>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_lock1'>
+          <pose>0.0775 0.4675 1.25 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.02</radius>
+              <length>0.08</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_lock1'>
+          <pose>0.0775 0.4675 1.25 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.02</radius>
+              <length>0.08</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='handle_lock2'>
+          <pose>0.0775 0.4675 1.25 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.015</radius>
+              <length>0.09</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/grey</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_handle_lock2'>
+          <pose>0.0775 0.4675 1.25 0 1.5708 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.015</radius>
+              <length>0.09</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <joint name="top_sliding_joint" type="prismatic">
+        <parent>frame</parent>
+        <child>door</child>
+        <axis>
+            <dynamics>
+              <damping>1.000000</damping>
+              <friction>1.000000</friction>
+            </dynamics>
+            <limit>
+                <lower>-1.0</lower>
+                <upper>0</upper>
+            </limit>
+            <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+      <static>0</static>
+    </model>
+</sdf>

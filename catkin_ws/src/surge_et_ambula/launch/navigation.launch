@@ -1,0 +1,43 @@
+<launch>
+  <!--rosparam file="$(find roomiebot_description_pkg)/param/costmap_common_params.yaml" command="load" ns="local_costmap" /-->
+  <arg name="static_map_file"  default="$(find config_files)/maps/appartment.yaml"/>
+  <arg name="prohibition_map_file"  default="$(find config_files)/prohibition_maps/appartment.yaml"/>
+
+  <node name="path_planner" pkg="path_planner" type="path_planner_node" output="screen">
+    <param name="diagonal_paths" value="True"/>
+  </node>
+  
+  <node name="simple_move"  pkg="simple_move"  type="simple_move_node"  output="screen">
+    <param name="max_linear_speed" value="0.6"/>
+  </node>
+
+  <node name="obs_detector"  pkg="obstacle_detector"  type="obs_detect_node"  output="screen">
+  </node>
+
+  <node name="map_augmenter"  pkg="map_augmenter"  type="map_augmenter_node"  output="screen">
+    <param name="use_lidar" value="True"/>
+    <param name="use_sonars" value="False"/>
+    <param name="use_point_cloud" value="False"/>
+    <param name="use_point_cloud2" value="False"/>
+    <param name="point_cloud_topic" value="/kinect/points"/>
+    <param name="laser_scan_topic" value="/scan"/>
+  </node>
+
+  <node name="mvn_pln"  pkg="mvn_pln"  type="mvn_pln_node"  output="screen">
+    <remap from="/nav_control/goal" to="/move_base_simple/goal"/>
+    <param name="patience" value="True"/>
+  </node>
+
+  <node name="prohibition_map_server" pkg="map_server" type="map_server" output="screen" args="$(arg prohibition_map_file)">
+    <remap from="/static_map" to="/prohibition_map"/>
+    <remap from="/map" to="/prohibition_layer_map"/>
+  </node>
+ 
+  <node name="map_server" pkg="map_server" type="map_server" output="screen" args="$(arg static_map_file)"/>
+
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+    <param name="initial_pose_x" value="3.0"/>
+    <param name="initial_pose_y" value="6.50"/>
+    <param name="initial_pose_a" value="-1.57"/>
+  </node>
+</launch>

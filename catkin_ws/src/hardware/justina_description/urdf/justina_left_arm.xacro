@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<robot name="justina_left_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find justina_description)/urdf/justina_left_arm.gazebo"/>
+  
+  <!-- LEFT ARM LINKS AND JOINTS-->
+  <link name="shoulders_left_link">
+    <visual>
+      <origin xyz="0 -0.01 0.02" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.108 0.065"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.01 0.02" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.108 0.065"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 -0.01 0.02" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_link1">
+    <visual>
+      <origin xyz="0 -0.01 -0.04881" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.06 0.04025"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.01 -0.04881" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.06 0.04025"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 -0.01 -0.04881" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_link2">
+    <visual>
+      <origin xyz="0 0 -0.125" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.19"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.01 0 -0.197" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.06 0.04025 0.04025"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.125" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.19"/> 
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.01 0 -0.197" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.06 0.04025 0.04025"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 -0.175" rpy = "0 0 0"/>
+      <mass value="0.155"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_link3">
+    <visual>
+      <origin xyz="0 0 -0.04" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.06"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.04" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.06"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 -0.04" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_link4">
+    <visual>
+      <origin xyz="0 0 -0.11" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.16"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.01 0 -0.167" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.06 0.04025 0.04025"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.11" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.16"/> 
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.01 0 -0.167" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.06 0.04025 0.04025"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.01 0 -0.147" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_link5">
+    <visual>
+      <origin xyz="0 0 -0.025" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.02"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.025" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.02"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 -0.025" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_link6">
+    <visual>
+      <origin xyz="0 0 -0.042" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.04"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.042" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04025 0.04025 0.04"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 -0.042" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_link7">
+    <visual>
+      <origin xyz="-0.01 0 -0.03" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.06 0.03525 0.03525"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 -0.055" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.03 0.1 0.03"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01 0 -0.03" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.06 0.03525 0.03525"/> 
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 -0.055" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.03 0.1 0.03"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.01 0 -0.05" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_grip_left">
+    <visual>
+      <origin xyz="0 0 -0.065" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04 0.005 0.09"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.065" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04 0.005 0.09"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 -0.065" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_grip_right">
+    <visual>
+      <origin xyz="0 0 -0.065" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04 0.005 0.09"/> 
+      </geometry>
+      <material name = "la_material"><color rgba="1.0 0.5 0 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.065" rpy = "0 0 0"/>
+      <geometry> 
+        <box size = "0.04 0.005 0.09"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 -0.065" rpy = "0 0 0"/>
+      <mass value="0.125"/>
+      <inertia
+        ixx="0.0015" ixy="0.0" ixz="0.0"
+        iyy="0.002175" iyz="0.0"
+        izz="0.003075"/>
+    </inertial>
+  </link>
+  
+  <link name="left_arm_grip_center"/>
+  
+  <joint name="la_1_joint" type="revolute"> 
+    <origin xyz="0 0.0 0" rpy="0 0 0"/>
+    <parent link="shoulders_left_link"/>
+    <child link="left_arm_link1"/>
+    <axis xyz="0 -1 0" />
+    <dynamics damping ="0.1" />
+    <limit effort="16.0" velocity="3.0" lower="-1.7" upper="1.7"/>
+  </joint>
+  
+  <joint name="la_2_joint" type="revolute"> 
+    <origin xyz="0 0.0 -0.06381" rpy="0 0 0"/>
+    <parent link="left_arm_link1"/>
+    <child link="left_arm_link2"/>
+    <axis xyz="1 0 0" />
+    <dynamics damping ="0.1" />
+    <limit effort="8.0" velocity="3.0" lower="-0.75" upper="1.85"/>
+  </joint>
+  
+  <joint name="la_3_joint" type="revolute"> 
+    <origin xyz="0 0.0 -0.215" rpy="0 0 0"/>
+    <parent link="left_arm_link2"/>
+    <child link="left_arm_link3"/>
+    <axis xyz="0 0 1" />
+    <dynamics damping ="0.1" />
+    <limit effort="6.0" velocity="3.0" lower="-2.5" upper="2.5"/>
+  </joint>
+  
+  <joint name="la_4_joint" type="revolute"> 
+    <origin xyz="0 0.0 -0.065" rpy="0 0 0"/>
+    <parent link="left_arm_link3"/>
+    <child link="left_arm_link4"/>
+    <axis xyz="0 -1 0" />
+    <dynamics damping ="0.1" />
+    <limit effort="8.0" velocity="3.0" lower="-1.8" upper="1.8"/>
+  </joint>
+  
+  <joint name="la_5_joint" type="revolute"> 
+    <origin xyz="0 0.0 -0.18" rpy="0 0 0"/>
+    <parent link="left_arm_link4"/>
+    <child link="left_arm_link5"/>
+    <axis xyz="0 0 1" />
+    <dynamics damping ="0.1" />
+    <limit effort="6.0" velocity="3.0" lower="-2.5" upper="2.5"/>
+  </joint>
+  
+  <joint name="la_6_joint" type="revolute"> 
+    <origin xyz="0 0.0 -0.03" rpy="0 0 0"/>
+    <parent link="left_arm_link5"/>
+    <child link="left_arm_link6"/>
+    <axis xyz="0 -1 0" />
+    <dynamics damping ="0.1" />
+    <limit effort="6.0" velocity="3.0" lower="-1.4" upper="1.57"/>
+  </joint>
+  
+  <joint name="la_7_joint" type="revolute"> 
+    <origin xyz="0 0.0 -0.055" rpy="0 0 0"/>
+    <parent link="left_arm_link6"/>
+    <child link="left_arm_link7"/>
+    <axis xyz="0 0 1" />
+    <dynamics damping ="0.1" />
+    <limit effort="3.0" velocity="3.0" lower="-2.5" upper="2.5"/>
+  </joint>
+  
+  <joint name="la_grip_left" type="revolute">
+    <origin xyz="0 0.04 -0.06" rpy="0 0 0"/>
+    <parent link="left_arm_link7"/> 
+    <child link="left_arm_grip_left"/>
+    <axis xyz="1 0 0" />
+    <dynamics damping ="0.1" />
+    <limit effort="3.0" velocity="3.0" lower="-0.3" upper="1.5"/>
+  </joint>
+  
+  <joint name="la_grip_right" type="revolute">
+    <origin xyz="0 -0.04 -0.06" rpy="0 0 0"/>
+    <parent link="left_arm_link7"/> 
+    <child link="left_arm_grip_right"/>
+    <axis xyz="-1 0 0" />
+    <dynamics damping ="0.1" />
+    <limit effort="3.0" velocity="3.0" lower="-0.3" upper="1.5"/>
+  </joint>
+  
+  <joint name="la_grip_center_joint" type="fixed">
+    <origin xyz="0 0 -0.13" rpy="0 0 0"/>
+    <parent link="left_arm_link7"/> 
+    <child link="left_arm_grip_center"/> 
+  </joint>  
+</robot>
+  

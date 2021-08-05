@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <model name='wallet'>
+      <link name='link'>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <mass>0.2</mass>
+          <inertia>
+            <ixx>0.0000156</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00061</iyy>
+            <iyz>0</iyz>
+            <izz>0.000648</izz>
+          </inertia>
+        </inertial>
+        <visual name='wallet'>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://wallet/meshes/wallet.dae</uri>
+            </mesh>
+          </geometry>
+          <material/>
+        </visual>
+        <collision name='wallet'>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://wallet/meshes/wallet.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.2</restitution_coefficient>
+              <threshold>0</threshold>
+            </bounce>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>0</static>
+    </model>
+</sdf>

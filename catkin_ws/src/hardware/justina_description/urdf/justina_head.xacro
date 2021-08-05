@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<robot name="justina_head" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find justina_description)/urdf/justina_head.gazebo"/>
+
+  <!--HEAD LINKS AND JOINTS-->
+  <link name="head_link1">
+    <visual>
+      <origin xyz= "-0.01 0 0.03" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.04 0.04"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz= "-0.01 0 0.03" rpy="0 0 0"/>
+      <geometry><box size="0.06 0.04 0.04"/></geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0 0 0.0" rpy = "0 0 0"/>
+      <mass value = "0.15" />
+      <inertia ixx = "0.00052" iyy = "0.00052" izz = "0.00004" ixy = "0" ixz = "0" iyz = "0" />
+    </inertial>
+  </link>
+  
+  <link name="head_link2">
+    <visual>
+      <origin xyz= "0.0 0 0.035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.04 0.06"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz= "0.0 0 0.035" rpy="0 0 0"/>
+      <geometry>
+        <box size = "0.04 0.04 0.06"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0 0 0.0" rpy = "0 0 0"/>
+      <mass value = "0.15" />
+      <inertia ixx = "0.00003125" iyy = "0.00003125" izz = "0.00003125" ixy = "0" ixz = "0" iyz = "0" />
+    </inertial>
+  </link>
+  
+  <joint name="head_pan" type="revolute">
+    <origin xyz="0.0 0 0.05" rpy="0 0 0" />
+    <parent link="head_link1"/>
+    <child link="head_link2"/>
+    <axis xyz="0 0 1" />
+    <dynamics damping ="0.1" />
+    <limit effort="6.0" velocity="3.0" lower="-3.14" upper="3.14"/>
+  </joint>
+
+  <link name="neck_link">
+    <visual>
+      <origin xyz="0 0 0.035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.02 0.02"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz= "0 0 0.035" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.02 0.02"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0 0 0.0" rpy = "0 0 0"/>
+      <mass value = "0.15" />
+      <inertia ixx = "0.00006205" iyy = "0.000555" izz = "0.0005776" ixy = "0" ixz = "0" iyz = "0" />
+    </inertial>
+  </link>
+
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="0.0 0 0.06" rpy="0 0 0" />
+    <parent link="head_link2"/>
+    <child link="neck_link"/>
+    <axis xyz="0 -1 0" />
+    <dynamics damping ="0.1" />
+    <limit effort="6.0" velocity="3.0" lower="-1.2" upper="1.0"/>
+  </joint>
+  
+  <link name="kinect_base">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size=" 0.058 0.207 0.04"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz= "0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size=" 0.058 0.207 0.04"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0 0 0.0" rpy = "0 0 0"/>
+      <mass value = "0.15" />
+      <inertia ixx = "0.00006205" iyy = "0.000555" izz = "0.0005776" ixy = "0" ixz = "0" iyz = "0" />
+    </inertial>
+  </link>
+  
+  <joint name="kinect_base_connect" type="fixed">
+    <origin xyz="0 0 0.065" rpy="0 0 0"/>
+    <parent link="neck_link"/>
+    <child link="kinect_base"/>
+  </joint>
+
+  <link name="kinect_link"/>
+  
+  <joint name="kinect_connect" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+    <parent link="kinect_base"/>
+    <child link="kinect_link"/>
+  </joint>
+</robot>
+  

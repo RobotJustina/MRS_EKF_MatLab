@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <model name='lawn_garden'>
+      <link name='link'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <inertial>
+          <mass>10.0</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <visual name='lawn_garden'>
+          <pose>0 0 -0.011 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>14.075 17.185 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/lawn/scripts/lawn.material</uri>
+              <uri>model://base_materials/lawn/textures</uri>
+              <name>lawn/lawn01</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_lawn_garden'>
+          <pose>0 0 -0.011 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>14.075 17.185 0.02</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+    </model>
+</sdf>

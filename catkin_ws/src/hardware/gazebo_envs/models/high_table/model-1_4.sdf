@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <model name='high_table'>
+      <link name='link'>
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+        <inertial>
+          <mass>10.0</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <visual name='top_board'>
+          <pose>0 0 1.04 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.5 2.3 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts/wood.material</uri>
+              <name>base_materials/dark_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_top_board'>
+          <pose>0 0 1.04 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.5 2.3 0.02</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='left_poll'>
+          <pose>0 1.00 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://high_table/meshes/poll.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+          </material>
+        </visual>
+        <collision name='collision_left_poll'>
+          <pose>0 1.00 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://high_table/meshes/poll.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='right_poll'>
+          <pose>0 -1.00 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://high_table/meshes/poll.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+          </material>
+        </visual>
+        <collision name='collision_right_poll'>
+          <pose>0 -1.00 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://high_table/meshes/poll.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+    </model>
+</sdf>

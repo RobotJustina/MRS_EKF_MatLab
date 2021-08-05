@@ -1,0 +1,292 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <model name='high_shelf'>
+      <link name='link'>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <visual name='left_board'>
+          <pose>-0.1475 0.009 0.898 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.018 1.796</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_left_board'>
+          <pose>-0.1475 0.009 0.898 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.018 1.796</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='right_board'>
+          <pose>-0.1475 0.441 0.898 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.018 1.796</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_right_board'>
+          <pose>-0.1475 0.441 0.898 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.018 1.796</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='top_board'>
+          <pose>-0.1475 0.225 1.7825 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.414 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_top_board'>
+          <pose>-0.1475 0.225 1.7825 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.414 0.035</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <visual name='1st_shelf'>
+          <pose>-0.162 0.225 1.51 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_1st_shelf'>
+          <pose>-0.162 0.225 1.51 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <visual name='2nd_shelf'>
+          <pose>-0.162 0.225 1.22 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_2nd_shelf'>
+          <pose>-0.162 0.225 1.22 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <visual name='3rd_shelf'>
+          <pose>-0.162 0.225 0.93 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_3rd_shelf'>
+          <pose>-0.162 0.225 0.93 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <visual name='4th_shelf'>
+          <pose>-0.162 0.225 0.65 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_4th_shelf'>
+          <pose>-0.162 0.225 0.65 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <visual name='5th_shelf'>
+          <pose>-0.162 0.225 0.36 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_5th_shelf'>
+          <pose>-0.162 0.225 0.36 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.266 0.414 0.018</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <visual name='bottom_board'>
+          <pose>-0.1475 0.225 0.035 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.414 0.07</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_bottom_board'>
+          <pose>-0.1475 0.225 0.035 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.295 0.414 0.07</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <visual name='back_board'>
+          <pose>-0.286 0.225 0.898 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.018 0.414 1.796</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wood/scripts</uri>
+              <uri>model://base_materials/wood/textures</uri>
+              <name>base_materials/light_wood</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='collision_back_board'>
+          <pose>-0.286 0.225 0.898 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.018 0.414 1.796</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface/>
+        </collision>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+    </model>
+</sdf>

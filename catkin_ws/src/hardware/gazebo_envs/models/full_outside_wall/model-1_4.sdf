@@ -1,0 +1,421 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+    <model name='full_outside_wall'>
+      <link name='link'>
+        <inertial>
+          <mass>50</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <visual name='x00_13y00_bottom_frame'>
+          <pose>5.0375 -0.0275 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.185 0.055 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='x00_13y00_collision_bottom_frame'>
+          <pose>5.0375 -0.0275 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.185 0.055 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='wall_x00_13y00'>
+          <pose>5.0375 -0.0275 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.185 0.055 1.99</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wall/scripts</uri>
+              <uri>model://base_materials/wall/textures</uri>
+              <name>wall/white_noise</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='wall_x00_13y00'>
+          <pose>5.0375 -0.002 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>10.08 0.055 1.99</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='x00y00_15_bottom_frame'>
+          <pose>-0.0275 6.59 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 13.29 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='x00y00_15_collision_bottom_frame'>
+          <pose>-0.0275 6.59 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 13.29 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='wall_x00y00_15'>
+          <pose>-0.0275 6.59 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 13.29 1.99</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wall/scripts</uri>
+              <uri>model://base_materials/wall/textures</uri>
+              <name>wall/white_noise</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='wall_x00y00_x00y15'>
+          <pose>-0.002 6.59 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.002 13.29 1.99</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='x13y00_12_bottom_frame'>
+          <pose>10.1025 5.3725 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 10.855 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='x13y00_12_collision_bottom_frame'>
+          <pose>10.1025 5.3725 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 10.855 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='wall_x13y00_12'>
+          <pose>10.1025 5.3725 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 10.855 1.99</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wall/scripts</uri>
+              <uri>model://base_materials/wall/textures</uri>
+              <name>wall/white_noise</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='wall_x13y00_12'>
+          <pose>10.1025 5.3725 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 10.855 1.99</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='x13y14_16_bottom_frame'>
+          <pose>10.1025 12.4675 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 1.535 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='x13y14_16_collision_bottom_frame'>
+          <pose>10.1025 12.4675 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 1.535 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='wall_x13y14_x13y16'>
+          <pose>10.1025 12.4675 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 1.535 1.99</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wall/scripts</uri>
+              <uri>model://base_materials/wall/textures</uri>
+              <name>wall/white_noise</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='wall_x13y14_x13y16'>
+          <pose>10.1025 12.4675 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055 1.535 1.99</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='x00_01y16_bottom_frame'>
+          <pose>0.4225 13.2075 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.955 0.055 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='x00_01y16_collision_bottom_frame'>
+          <pose>0.4225 13.2075 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.955 0.055 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='wall_x00_01y16'>
+          <pose>0.4225 13.2075 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.955 0.055 1.99</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wall/scripts</uri>
+              <uri>model://base_materials/wall/textures</uri>
+              <name>wall/white_noise</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='wall_x00_x01y16'>
+          <pose>0.4225 13.2075 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.955 0.055 1.99</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+
+
+        <visual name='x03_13y16_bottom_frame'>
+          <pose>5.965 13.2075 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>8.330 0.05 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/color/scripts</uri>
+              <name>hsr_color/white</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='x03_13y16_collision_bottom_frame'>
+          <pose>5.965 13.2075 0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>8.330 0.05 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='wall_x03_13y16'>
+          <pose>5.965 13.2075 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>8.330 0.055 1.99</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://base_materials/wall/scripts</uri>
+              <uri>model://base_materials/wall/textures</uri>
+              <name>wall/white_noise</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='wall_x03_13y16'>
+          <pose>5.965 13.2075 1.095 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>8.330 0.055 1.99</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+
+
+
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+    </model>
+</sdf>

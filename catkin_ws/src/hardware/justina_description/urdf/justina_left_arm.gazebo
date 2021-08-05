@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<robot name="justina_left_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!--LEFT ARM TRANSMISSIONS-->
+  <transmission name="la_1_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_1_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_1_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_2_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_2_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_2_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_3_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_3_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_3_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_4_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_4_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_4_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_5_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_5_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_5_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_6_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_6_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_6_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_7_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_7_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_7_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_grip_left_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_grip_left">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_grip_left_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  <transmission name="la_grip_right_transmission">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="la_grip_right">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="la_grip_right_motor">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>      
+  </transmission>
+  
+  <gazebo reference="shoulders_left_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_link1">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_link2">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_link3">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_link4">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_link5">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_link6">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_link7">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_arm_grip_left">
+    <material>Gazebo/Orange</material>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <slip1>0</slip1>
+    <slip2>0</slip2>
+    <minDepth>0.001</minDepth>
+    <maxVel>0</maxVel>
+    <torsional>
+      <ode>
+        <coefficient>1000</coefficient>
+        <slip>0</slip>
+      </ode>
+    </torsional>
+  </gazebo>
+  <gazebo reference="left_arm_grip_right">
+    <material>Gazebo/Orange</material>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <slip1>0</slip1>
+    <slip2>0</slip2>
+    <minDepth>0.001</minDepth>
+    <maxVel>0</maxVel>
+    <torsional>
+      <ode>
+        <coefficient>1000</coefficient>
+        <slip>0</slip>
+      </ode>
+    </torsional>
+  </gazebo>
+</robot>
+  

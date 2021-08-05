@@ -1,0 +1,37 @@
+<launch>
+  <arg name="world" default="appartment_april_tags"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find gazebo_envs)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <param name="/base_link_name" value="base_link"/>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="debug" value="false"/>
+    <arg name="world_name" value="$(find gazebo_envs)/worlds/$(arg world).world"/>
+  </include>
+  
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find justina_description)/urdf/justina.xacro'"/>
+  <node name="robot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-urdf -param robot_description -model justina -x 7.64 -y 5.0 -z 0.05 -Y 1.57"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <param name="use_tf_static" value="false"/>
+  </node>
+  <node name="tf_wheel_front_connect_x" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 base_link wheel_front_x 30"/>
+  <node name="tf_wheel_front_connect_y" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 wheel_front_x wheel_front_y 30"/>
+  <node name="tf_wheel_front_connect_z" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 wheel_front_y wheel_front_z 30"/>
+  <node name="tf_wheel_back_connect_x"  pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 base_link wheel_back_x 30"/>
+  <node name="tf_wheel_back_connect_y"  pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 wheel_back_x wheel_back_y 30"/>
+  <node name="tf_wheel_back_connect_z"  pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 wheel_back_y wheel_back_z 30"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find config_files)/rviz/justina.rviz"/>
+  
+  <node name="justina_gui" pkg="justina_gui" type="justina_gui_node" output="screen">
+    <param name="la_predefined" value="$(find config_files)/manipulation/la_predefined.yaml"/>
+    <param name="ra_predefined" value="$(find config_files)/manipulation/ra_predefined.yaml"/>
+    <param name="hd_predefined" value="$(find config_files)/manipulation/hd_predefined.yaml"/>
+  </node>
+
+  <include file="$(find surge_et_ambula)/launch/justina_controllers.launch"/>
+  <include file="$(find surge_et_ambula)/launch/navigation.launch"/>
+</launch>

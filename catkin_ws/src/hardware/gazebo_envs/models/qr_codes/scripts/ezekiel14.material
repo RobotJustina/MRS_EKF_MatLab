@@ -1,0 +1,15 @@
+material qr_codes/ezekiel14
+{
+    receive_shadows off
+    technique
+    {   
+        pass
+        {   
+            texture_unit
+            {   
+                texture ezekiel14.png
+                scale 1.0 1.0
+            }   
+        }   
+    }   
+}

@@ -1,0 +1,15 @@
+material april_tag/tag16h5_28
+{
+    receive_shadows off
+    technique
+    {   
+        pass
+        {   
+            texture_unit
+            {   
+                texture tag16_05_00028.png
+                scale 1.0 1.0
+            }   
+        }   
+    }   
+}
