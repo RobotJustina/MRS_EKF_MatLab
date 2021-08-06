@@ -1,3 +1,3 @@
-float32 distance
-float32 angle
+float64 distance
+float64 angle
 uint32 id

@@ -2,3 +2,5 @@ devel/
 build/
 src/CMakeLists.txt
 .catkin_workspace
+src/matlab_msg_gen_ros1
+*/matlab_msg_gen_ros1

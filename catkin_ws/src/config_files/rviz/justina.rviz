@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Status1
         - /TF1/Frames1
+        - /Landmarks1
       Splitter Ratio: 0.5
     Tree Height: 241
   - Class: rviz/Selection
@@ -398,7 +399,7 @@ Visualization Manager:
       Shaft Length: 0.4000000059604645
       Shaft Radius: 0.10000000149011612
       Shape: Arrow (3D)
-      Topic: /recognized_april_tags
+      Topic: /landmark_markers
       Unreliable: false
       Value: true
   Enabled: true
