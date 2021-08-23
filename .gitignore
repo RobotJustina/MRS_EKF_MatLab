@@ -1,3 +1,7 @@
+mobile-robotics-simulation-toolbox/
+#autosaved Matlab
+*.asv
+*.vscode
 # Prerequisites
 *.d
 
