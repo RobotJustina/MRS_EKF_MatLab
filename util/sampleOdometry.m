@@ -35,7 +35,7 @@ x_o(1) = x(1) + d_trans1_hat * cos( x(3) + d_rot1_hat );
 x_o(2) = x(2) + d_trans1_hat * sin( x(3) + d_rot1_hat );
 
 
-u = [  d_trans1_hat; d_rot1_hat+x(3) ];
+u = [   d_rot1_hat+x(3); d_trans1_hat ];
 %*theta_plus_rotation1 = x_vector(2) + d_rot1_hat;
 %*translation = d_trans1_hat;
 
