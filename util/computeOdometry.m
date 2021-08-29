@@ -9,9 +9,7 @@ function [odom_pose] = computeOdometry(R,L,wR,wL,sampleTime ,lastOdom)
     d_theta = (d_sr - d_sl)/L;
     
     % Store each pose computed by odometry
-    odom_pose = lastOdom + [ d_s *cos(lastOdom(3) +  d_theta/2 ) ; 
-                             d_s *sin(lastOdom(3) +  d_theta/2 );
-                             d_theta];  
+    odom_pose = lastOdom + [ d_s *cos(lastOdom(3) +  d_theta/2 ) ;  d_s *sin(lastOdom(3) +  d_theta/2 ); d_theta];  
 
 end
 

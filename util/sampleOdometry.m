@@ -24,6 +24,7 @@ if  a < .01
 else
     d_rot1 = normalizeAngle(normalizeAngle(atan2(y_bar_p - y_bar, x_bar_p - x_bar )) - normalizeAngle(theta_bar)); %atan2(y_bar_p - y_bar, x_bar_p - x_bar ) - theta_bar;
 end
+
 d_trans1 = sqrt(  power(x_bar - x_bar_p, 2)  +  power(y_bar - y_bar_p, 2)  );
 d_rot2 = normalizeAngle(normalizeAngle(theta_bar_p) - normalizeAngle(theta_bar + d_rot1)); %theta_bar_p - theta_bar - d_rot1;
     
