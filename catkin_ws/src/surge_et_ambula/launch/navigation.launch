@@ -34,10 +34,18 @@
   </node>
  
   <node name="map_server" pkg="map_server" type="map_server" output="screen" args="$(arg static_map_file)"/>
+ <!--node pkg="tf" type="static_transform_publisher" name="kinect_camera_to_kinect_link" args="0 0 0 0 0 0 map odom  50"/
 
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
     <param name="initial_pose_x" value="3.0"/>
     <param name="initial_pose_y" value="6.50"/>
     <param name="initial_pose_a" value="-1.57"/>
-  </node>
+  </node>--> 
+
+  <node name="tf_map_odom" pkg="ekf_tf" type="tf_map_odom" output="screen" >
+    <param name="initial_pose_x" value="3.0"/>
+    <param name="initial_pose_y" value="6.50"/>
+    <param name="initial_pose_a" value="-1.57"/>
+    </node>
+
 </launch>
