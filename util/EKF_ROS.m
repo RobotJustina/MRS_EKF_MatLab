@@ -8,16 +8,16 @@ camera_info   = cameraIntrinsics(554.254691191187, [320.5, 240.5], [480,640]);
 pause(1)
 
 
-alpha= [ 0.2 0.2 0.2 0.2 ];
+alpha= [ 0.02 0.01 0.02 0.01 ];
 
 
 
 Q=  [0.000025, 0,    0;    
            0,    0.000025, 0;    
-           0,    0,    0.00002 ];
+           0,    0,    0.0002 ];
 R =[0.009, 0,      0;    
-   0,      0.0009, 0;    
-   0,      0,      0.0000001 ];
+           0,      0.0009, 0;    
+           0,      0,      0.001 ];
 
 
 sigma = [0 0 0;  %Covariance matrix start with all elements zero
@@ -47,7 +47,7 @@ while true
     msg_markers   = rosmessage(pub_markers);
     msg_landmarks = rosmessage(pub_landmarks);
     msg_markers.Header.FrameId = 'kinect_link';
-    [id,loc,pose] = readAprilTag(readImage(receive(sub_rgb_image,1)),"tag16h5", camera_info, 0.4);  
+    [id,loc,pose] = readAprilTag( imgaussfilt(readImage(receive(sub_rgb_image,1)),8) ,"tag16h5", camera_info, 0.4);  
     detections = zeros(length(id),3);
     for i=1:length(id)
         msg_markers.Poses(i).Position.X = pose(i).Translation(1);
@@ -107,7 +107,7 @@ while true
     aux = quat2eul(quatmultiply(quatconj(quat_1),quat));
     spin =   abs(aux(3));
     
-    if distance >.1 || spin > pi/6 && ~isempty(id)
+    if distance >.1 || spin > pi/6 && ~isempty(id) && ~isempty(detections) 
         
         detections
         
@@ -131,8 +131,12 @@ while true
         send(pub_pose_ekf  , msg_pose_ekf);
     
         
-        sv
+       
+        error_ellipse(sigma(1:2,1:2), sv(1:2) );
+         
+    
         
+%         plot(error_ellipse(sigma(1:2,1:2), sv(1:2)));
         o_1 = o; 
         quat_1 = quat;
     end
@@ -145,6 +149,9 @@ while true
     
     drawnow
     pause(0.1);
+    
 end
     
     
+
+

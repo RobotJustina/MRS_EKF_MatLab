@@ -26,7 +26,7 @@ function [sv,sigma] = ekf_differential(o_1,o,x,alpha,sigma,detections,objects,Q,
         if id_landmark == -1
            continue; 
         end
-        if detections(i,1)>3 ||detections(i,2) > 1.57 
+        if detections(i,1)>5 ||detections(i,2) > 1.57  ||detections(i,2) < -1.57 
            continue; 
         end
         
