@@ -42,10 +42,10 @@
     <param name="initial_pose_a" value="-1.57"/>
   </node>--> 
 
-  <node name="tf_map_odom" pkg="ekf_tf" type="tf_map_odom" output="screen" >
+  <!--node name="tf_map_odom" pkg="ekf_tf" type="tf_map_odom" output="screen" >
     <param name="initial_pose_x" value="3.0"/>
     <param name="initial_pose_y" value="6.50"/>
     <param name="initial_pose_a" value="-1.57"/>
-    </node>
+    </node-->
 
 </launch>

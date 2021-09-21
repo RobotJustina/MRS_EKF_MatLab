@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><sdf version="1.6">
+  <model name="mark0703">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://mark0703/meshes/mark0703.dae</uri>
+          <scale>0.09 0.09 0.09</scale></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
