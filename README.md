@@ -35,8 +35,8 @@ MathWorks Student Competitions Team (2021). Mobile Robotics Simulation Toolbox (
 
 Be sure you already have the requirements
 
-* Open EKF.mlx  (Live Script)
-* Set all the configuration constants .
+* Check Lessons folder to learn about all basics to understand  EKF in mlx (Live Script) format.
+* At final lessons you will implement EKF.
 
 <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_gui.png" alt="Full System" width="440"/>
 
