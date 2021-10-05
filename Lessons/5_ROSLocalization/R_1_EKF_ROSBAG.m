@@ -183,12 +183,7 @@ while true
        tform.Transform.Rotation.Y = inittThetaQuat(3);
        tform.Transform.Rotation.Z = inittThetaQuat(4);
        tform.Transform.Rotation.W = inittThetaQuat(1);
-        
-        
-        
-        
-        
-       
+
 %         error_ellipse(sigma(1:2,1:2), sv(1:2) );
          
         o_1 = o; 
