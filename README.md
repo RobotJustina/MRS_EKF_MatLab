@@ -45,6 +45,7 @@ At this lessons you will learn how to plan a path and how to make the robot foll
  
  *Chapter 5 Localization: 
 In this chapter you will learn why is necessary an localization system and implement the Extended Kalman Filter understanding the theory of each step.
+
  <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch5.png" alt="Full System" width="440"/>
  
  *Chapter 6 ROS Localization:
