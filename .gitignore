@@ -1,4 +1,5 @@
 mobile-robotics-simulation-toolbox/
+share/
 catkin_ws/
 #autosaved Matlab
 *.asv
