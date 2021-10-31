@@ -26,37 +26,36 @@ simple and intuitive derivation. IEEE Signal processing magazine, 29(5):128–
 
 ## Lessons:
 
-Be sure you already have the requirements
+Be sure you already have the requirements Check Lessons folder to start, the lessons are divided into 6 chapters:
 
-* Check Lessons folder to start, the lessons are divided into 6 chapters:
 * Chapter 1 Basics:
 	It Covers all the basics to run simulations and understand the basic kinematics for a differential mobile robot.
-<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch1.png" alt="Full System" width="440"/>
+<img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch1.png" alt="Full System" width="440"/>
 
-*Chapter 2 Sensors:
+* Chapter 2 Sensors:
 	At this chapter you will learn how to implement sensors such as Odometry, LIDAR, Object detection and algorithms like VFH for obstacle avoidance.
- <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch2.png" alt="Full System" width="440"/>
+ <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch2.png" alt="Full System" width="440"/>
  
 * Chapter 3 Path planning:
 At this lessons you will learn how to plan a path and how to make the robot follows it (path tracking) using RRT* algorithm.
- <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch3.png" alt="Full System" width="440"/>
+ <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch3.png" alt="Full System" width="440"/>
  
  *Chapter 4 Summary of previous Chapters:
  In this lesson you will learn how to put all together and reduce your code from previous lessons.
  
  *Chapter 5 Localization: 
 In this chapter you will learn why is necessary an localization system and implement the Extended Kalman Filter understanding the theory of each step.
- <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch5.png" alt="Full System" width="440"/>
+ <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch5.png" alt="Full System" width="440"/>
  
  *Chapter 6 ROS Localization:
 In this lesson We show you how   a localization system works along with MATLAB and ROS. And you will learn how to use the correct EKF parameters  using a ROSBAG.
- <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch6.png" alt="Full System" width="440"/>
+ <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch6.png" alt="Full System" width="440"/>
 
 
 
 * You can practice with different algorithms, maps (maps folder) and changing parameters to practice in different environments and situations.
  
-<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_office.PNG" alt="Full System" width="440"/>
+<img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/EKF_office.PNG" alt="Full System" width="440"/>
 
 Odom:Pink line
 
