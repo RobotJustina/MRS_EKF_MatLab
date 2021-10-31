@@ -1,4 +1,4 @@
-# Learning tools for the localization of mobile robots using visual landmarks in the environment and the extended Kalman filter
+# Learning tools for the localization of mobile robots using visual landmarks in the environment and the extended Kalman Filter
 
 ## Overview 
 This proposal addresses the creation of educational tools that will help students with the concept of the location of a mobile robot using the extended Kalman filter (EKF) with landmarks placed on robot´s environment.
