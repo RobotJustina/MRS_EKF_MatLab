@@ -8,7 +8,10 @@ The localization of a robot is a fundamental tool for its navigation. There are 
 
 
 ## Requirements
-* Matlab 2020a (Required toolbox: Mobile Robotics Simulation Toolbox, Navigation Toolbox)
+* Matlab 2020a (Required toolbox: Navigation Toolbox)
+* MathWorks Student Competitions Team (2021). Mobile Robotics Simulation Toolbox (https://github.com/mathworks-robotics/mobile-robotics-simulation-toolbox), GitHub. Retrieved June 29, 2021.
+* AJ Johnson (2021). error_ellipse (https://www.mathworks.com/matlabcentral/fileexchange/4705-error_ellipse), MATLAB Central File Exchange. Retrieved October 31, 2021. 
+* ROS Melodic (http://wiki.ros.org/melodic/Installation/Ubuntu)
 
 ## Overview 
 
@@ -20,31 +23,38 @@ EKF (An excelent deviation of EKF can be foud in: THRUN, Sebastian; BURGARD, Wol
 simple and intuitive derivation. IEEE Signal processing magazine, 29(5):128–
 132, 2012.)
 
-Controllers
 
-* Pure Pursuit Controller:For path tracking. (More information at https://www.mathworks.com/help/robotics/ug/pure-pursuit-controller.html)
-* Field Histogram (VFH): For Obstacle avoidance and steering direction. (More information at https://www.mathworks.com/help/nav/ug/vector-field-histograms.html)
-
-Simulation
-
-MathWorks Student Competitions Team (2021). Mobile Robotics Simulation Toolbox (https://github.com/mathworks-robotics/mobile-robotics-simulation-toolbox), GitHub. Retrieved June 29, 2021.
-
-
-
-## Running simulations:
+## Lessons:
 
 Be sure you already have the requirements
 
-* Check Lessons folder to learn about all basics to understand  EKF in mlx (Live Script) format.
-* At final lessons you will implement EKF.
+* Check Lessons folder to start, the lessons are divided into 6 chapters:
+* Chapter 1 Basics:
+	It Covers all the basics to run simulations and understand the basic kinematics for a differential mobile robot.
+<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch1.png" alt="Full System" width="440"/>
 
-<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_gui.png" alt="Full System" width="440"/>
+*Chapter 2 Sensors:
+	At this chapter you will learn how to implement sensors such as Odometry, LIDAR, Object detection and algorithms like VFH for obstacle avoidance.
+ <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch2.png" alt="Full System" width="440"/>
+ 
+* Chapter 3 Path planning:
+At this lessons you will learn how to plan a path and how to make the robot follows it (path tracking) using RRT* algorithm.
+ <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch3.png" alt="Full System" width="440"/>
+ 
+ *Chapter 4 Summary of previous Chapters:
+ In this lesson you will learn how to put all together and reduce your code from previous lessons.
+ 
+ *Chapter 5 Localization: 
+In this chapter you will learn why is necessary an localization system and implement the Extended Kalman Filter understanding the theory of each step.
+ <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch5.png" alt="Full System" width="440"/>
+ 
+ *Chapter 6 ROS Localization:
+In this lesson We show you how   a localization system works along with MATLAB and ROS. And you will learn how to use the correct EKF parameters  using a ROSBAG.
+ <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/Ch6.png" alt="Full System" width="440"/>
 
-* Run the entire simulation, see and analyze EKF algorithm, constant, and environment setup.
 
-<img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_execution.PNG" alt="Full System" width="440"/>
 
-* Try to change  all  parameters such as map, landmarks etc.
+* You can practice with different algorithms, maps (maps folder) and changing parameters to practice in different environments and situations.
  
 <img src="https://raw.githubusercontent.com/dieg4231/MRS_EKF_MatLab/main/img/EKF_office.PNG" alt="Full System" width="440"/>
 
