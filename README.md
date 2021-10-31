@@ -40,15 +40,15 @@ Be sure you already have the requirements Check Lessons folder to start, the les
 At this lessons you will learn how to plan a path and how to make the robot follows it (path tracking) using RRT* algorithm.
  <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch3.png" alt="Full System" width="440"/>
  
- *Chapter 4 Summary of previous Chapters:
+* Chapter 4 Summary of previous Chapters:
  In this lesson you will learn how to put all together and reduce your code from previous lessons.
  
- *Chapter 5 Localization: 
+* Chapter 5 Localization: 
 In this chapter you will learn why is necessary an localization system and implement the Extended Kalman Filter understanding the theory of each step.
 
  <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch5.png" alt="Full System" width="440"/>
  
- *Chapter 6 ROS Localization:
+* Chapter 6 ROS Localization:
 In this lesson We show you how   a localization system works along with MATLAB and ROS. And you will learn how to use the correct EKF parameters  using a ROSBAG.
  <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch6.png" alt="Full System" width="440"/>
 
