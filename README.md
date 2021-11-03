@@ -35,7 +35,7 @@ At this lessons you will learn how to plan a path and how to make the robot foll
  In this lesson you will learn how to put all together and reduce your code from previous lessons.
  
 * Chapter 5 Localization: 
-In this chapter you will learn why is necessary a localization system and then you will implement the Extended Kalman Filter understanding the theory of each step. You can find a detailed explanation in the file Lecture_Kalman_filter_robots.pdf in this repository.
+In this chapter you will learn why is necessary a localization system and then you will implement the Extended Kalman Filter understanding the theory of each step. You can find a detailed explanation in the file __Lecture_Kalman_filter_robots.pdf__ in this repository.
 
  <img src="https://raw.githubusercontent.com/RobotJustina/MRS_EKF_MatLab/main/img/Ch5.png" alt="Full System" width="440"/>
  
