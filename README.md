@@ -2,7 +2,7 @@
 [![View Lessons on Mobile Robot Localization and Kalman Filters on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/109485-lessons-on-mobile-robot-localization-and-kalman-filters)
 
 ## Overview 
-This proposal addresses the creation of educational tools that will help students with the concept of the location of a mobile robot using the extended Kalman filter (EKF) with landmarks placed on robot´s environment.
+This submission contains educational tools to help students understand the concept of localization for mobile robots. The lessons include interactive scripts to demonstrate the use of common localization algorithms, landmark-based localization and the Extended Kalman Filter (EKF).
 
 
 The localization of a robot is a fundamental tool for its navigation. There are localization methods based on different sources of information and hardware components, as there is no method that works properly in any scenario and for any robot. From the educational point of view, few students students are able to understand all the mathematical background involved in the localization process.
